@@ -1,0 +1,18 @@
+<form #form1="ngForm" (ngSubmit)="onClickCheck(form1)">
+    <mat-card>
+        <mat-card-title>ngx-mask</mat-card-title>
+        <mat-card-content>
+            <div>
+                <mat-form-field>
+                    <input name="zipCode" required pattern="\d{3}-\d{4}" matInput placeholder="Zip code" [(ngModel)]="zipCode" mask="000-0000"
+                        dropSpecialCharacters="false">
+                    <mat-hint align="start">format: 000-0000</mat-hint>
+                </mat-form-field>
+                <span>Model value is: [{{zipCode}}]</span>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>SUBMIT</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
